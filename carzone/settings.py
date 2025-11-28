@@ -89,6 +89,7 @@ DATABASES = {
 }
 
 
+
 print("DB_PASSWORD:", os.getenv('DB_PASSWORD'))
 
 # Password validation
@@ -137,3 +138,5 @@ STATICFILES_DIRS = [
     	os.path.join(BASE_DIR, 'carzone/static'),
 ]
 
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
