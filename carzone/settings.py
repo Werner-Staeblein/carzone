@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'pages.apps.PagesConfig',
     'cars.apps.CarsConfig',
-    'ckeditor'
+    'ckeditor',
+    'django.contrib.humanize',
 ]
 
 MIDDLEWARE = [
@@ -134,10 +135,13 @@ USE_L10N = True
 
 STATIC_URL = '/static/'
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+# Where collectstatic will put files for production
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
+# Where your source static files live during development
 STATICFILES_DIRS = [
-    	os.path.join(BASE_DIR, 'carzone/static'),
+    os.path.join(BASE_DIR, 'static'),
+    os.path.join(BASE_DIR, 'carzone/static'),
 ]
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
