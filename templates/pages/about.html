@@ -2,6 +2,7 @@
 {% extends 'pages/base.html'%}
 {% load static %}
 
+{% block title %} | About{% endblock %}
 {% block content %}
 
 <!-- Sub banner start -->
@@ -98,8 +99,8 @@
                             </div>
                         </div>
                         <div class="details">
-                            <h4><a href="team-detail.html">{{team.first_name}} {{team.last_name}}</a></h4>
-                            <h5>Manager</h5>
+                            <h4>{{team.first_name}} {{team.last_name}}</a></h4>
+                            <h5>{{team.designation}}</h5>
                         </div>
                     </div>
                 </div>
